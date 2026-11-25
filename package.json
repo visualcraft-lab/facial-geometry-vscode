@@ -1,0 +1,52 @@
+{
+  "name": "facial-geometry-calc",
+  "displayName": "Facial Geometry Calculator",
+  "description": "Compute 2D facial landmark geometry metrics (canthal tilt, facial thirds balance, golden ratio delta, bilateral symmetry) directly from the VS Code Command Palette.",
+  "version": "0.1.0",
+  "publisher": "visualcraft-lab",
+  "license": "MIT",
+  "homepage": "https://looksmaxscale.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visualcraft-lab/facial-geometry-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/visualcraft-lab/facial-geometry-vscode/issues"
+  },
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Education"
+  ],
+  "keywords": [
+    "facial-geometry",
+    "canthal-tilt",
+    "golden-ratio",
+    "landmarks",
+    "math"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "facialGeometry.canthalTilt",
+        "title": "Facial Geometry: Calculate Canthal Tilt"
+      },
+      {
+        "command": "facialGeometry.facialThirds",
+        "title": "Facial Geometry: Calculate Facial Thirds Balance"
+      },
+      {
+        "command": "facialGeometry.goldenRatio",
+        "title": "Facial Geometry: Calculate Golden Ratio Delta"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node --test test/geometry.test.js"
+  }
+}
